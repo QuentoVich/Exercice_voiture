@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo"><img src="./VéhiLoc.svg" alt="logo entreprise" /></div>
+
+      <div class="menu">
+        <ul class="liste">
+          <a href="#offre"><li>Nos offres</li></a>
+          <a href="#choix"><li>Nos véhicules</li></a>
+          <a href="#contact"><li>Contact</li></a>
+          <a href=""><li>Inscription/Connexion</li></a>
+        </ul>
+      </div>
+    </header>
+
+    <section class="element_1">
+      <div>
+        <img src="./poster-voiture.svg" alt="une voiture grise" />
+      </div>
+
+      <div id="formulaire">
+        <form action="reserver.php" method="get" id="reservation">
+          <h3>Réservez votre véhicule</h3>
+          <div>
+            <label for="ville">Choisir une ville</label>
+            <br />
+            <input type="text" id="ville" name="Ville" class="form_bar" />
+          </div>
+
+          <div>
+            <label for="départ">Départ</label>
+            <br />
+            <input
+              type="datetime-local"
+              id="date_départ"
+              name="date_départ"
+              class="form_bar"
+            />
+          </div>
+
+          <div>
+            <label for="retour">Arrivée</label>
+            <br />
+            <input
+              type="datetime-local"
+              id="date_retour"
+              name="date_retour"
+              class="form_bar"
+            />
+          </div>
+
+          <div id="choix">
+            <label for="choix_véhicules">Type de véhicule :</label>
+            <br />
+            <input
+              type="radio"
+              id="voiture"
+              name="choix_véhicule"
+              value="voiture"
+              checked
+            />
+            <label for="voiture"
+              ><img
+                src="./Car.svg"
+                alt="logo voiture"
+                class="vignette_véhicules"
+            /></label>
+
+            <input
+              type="radio"
+              id="camionnette"
+              name="choix_véhicule"
+              value="camionette"
+            />
+            <label for="camionnette"
+              ><img
+                src="./Truck.svg"
+                alt="logo camionnette"
+                class="vignette_véhicules"
+            /></label>
+
+            <input
+              type="radio"
+              id="dirt-bike"
+              name="choix_véhicule"
+              value="dirt-bike"
+            />
+            <label for="dirt-bike"
+              ><img
+                src="./Dirt Bike.svg"
+                alt="logo dirt-bike"
+                class="vignette_véhicules"
+            /></label>
+
+            <input
+              type="radio"
+              id="bicycle"
+              name="choix_véhicule"
+              value="bicycle"
+            />
+            <label for="bicycle"
+              ><img
+                src="./Bicycle.svg"
+                alt="logo bicycle"
+                class="vignette_véhicules"
+            /></label>
+          </div>
+
+          <button type="submit" name="recherche" id="recherche">
+            Rechercher
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="offres">
+      <h2 id="offre">Nos Offres du moment</h2>
+      <div id="info">
+        <div class="offre_element">
+          <img src="./photo-offre2.svg" alt="photo1" />
+          <p>Louez dès 18 ans sans surcoût</p>
+        </div>
+        <div class="offre_element">
+          <img src="./photo-offre1.svg" alt="" />
+          <p>Location 24/7</p>
+        </div>
+        <div class="offre_element">
+          <img src="./photo-offre3.svg" alt="" />
+          <p>Déménagez en tout sérénité</p>
+        </div>
+      </div>
+
+      <h2 id="choix">Nos gammes de véhicules</h2>
+      <div id="gamme">
+        <img src="./Car.svg" alt="car" />
+        <img src="./Truck.svg" alt="truck" />
+        <img src="./Dirt Bike.svg" alt="dirt bike" />
+        <img src="./Bicycle.svg" alt="bicycle" />
+      </div>
+
+      <div id="selection_voiture">
+        <div>
+          <img src="./renault-clio.png" alt="photo de voiture" />
+          <h3>Renault Clio</h3>
+          <p>à partir de 30€</p>
+        </div>
+        <div>
+          <img src="./renault-clio.png" alt="photo de voiture" />
+          <h3>Renault Clio</h3>
+          <p>à partir de 30€</p>
+        </div>
+        <div>
+          <img src="./renault-clio.png" alt="photo de voiture" />
+          <h3>Renault Clio</h3>
+          <p>à partir de 30€</p>
+        </div>
+        <div>
+          <img src="./renault-clio.png" alt="photo de voiture" />
+          <h3>Renault Clio</h3>
+          <p>à partir de 30€</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <h2 id="contact">Contact</h2>
+
+      <div id="formulaire2">
+        <form action="contact.php" method="post">
+          <div id="séparation">
+            <div class="renseignements">
+              <label for="name">nom :</label>
+              <input
+                type="text"
+                name="nom"
+                id="nom"
+                required
+                class="form_bar"
+              />
+              <label for="prenom">prénom :</label>
+              <input
+                type="text"
+                name="prenom"
+                id="prenom"
+                required
+                class="form_bar"
+              />
+              <label for="mail">email :</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                class="form_bar"
+              />
+            </div>
+
+            <div>
+              <label for="message">votre message :</label>
+              <textarea
+                id="msg"
+                name="message"
+                required
+                class="form_bar"
+              ></textarea>
+            </div>
+          </div>
+          <div class="envoyer">
+            <button type="submit" name="envoyer" id="envoyer">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <ul>
+        <h3>Location de voiture</h3>
+        <li>location sur Lille</li>
+        <li>location sur Paris</li>
+        <li>location sur Lyon</li>
+        <li>location sur Marseille</li>
+      </ul>
+
+      <ul>
+        <h3>Location d'utilitaire</h3>
+        <li>location de fourgonette</li>
+        <li>location de fourgon</li>
+        <li>location de camionette</li>
+        <li>location de camion hayon</li>
+      </ul>
+
+      <ul>
+        <h3>Location déménagement</h3>
+        <li>location camion déménagement</li>
+        <li>location de garde meuble</li>
+        <li>Nos kits de déménagement</li>
+      </ul>
+
+      <ul>
+        <h3>Qui somme nous ?</h3>
+        <li>Devenir franchisé</li>
+        <li>Nous contacter</li>
+        <li>Conditions générales</li>
+        <li>Conditions assurance complémentaires</li>
+      </ul>
+    </footer>
+  </body>
+</html>
